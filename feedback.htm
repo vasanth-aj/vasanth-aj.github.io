@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="index.css" type="text/css">
+        <title>Feedback</title>
+    </head>
+    <body>
+        <script>
+
+            function enter()
+            {
+                alert("Thank you for your response!");
+            }
+
+        </script>
+        <style>
+            .feed{
+                    position:absolute;
+                    left:30%;
+                    top:30%;
+                    opacity: 0.92;
+                    border:2.5px solid red;
+                    width:35%;
+                    border-radius:7px;
+            }
+
+            .feed:focus{
+                   transition:1.5s;
+                   border:2px solid red;
+                   border-radius:13px;
+                   opacity:0.85;
+                   width:40%;
+                   outline:none;
+                   filter: drop-shadow(0 0 0.75rem red);
+                  
+                   
+            }
+            ::placeholder
+            {
+                color:red;
+                font-style:italic;
+            }
+            .button{
+                    position: absolute;
+                    bottom:24%;
+                    left:43%;
+                    width:100px;
+                    height:32px;
+                    padding:3px;
+                    font-weight:bold;
+                    border-radius:4px;
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                    box-sizing:border-box;
+                    box-shadow: 2px 2px 4px #000000;
+                    border:groove;
+                    animation:mymove 2s infinite;
+            }
+            .button:hover{
+                    transition: 1s;
+                    height:36px;
+                    width:120px;
+                    background-color:red;
+                    border-radius:7px;
+                    outline:none;
+                    border:none;
+                    font-weight:bold;
+                    color:white;
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                    box-shadow: 2px 2px 4px #000000;
+                    
+            }
+            @keyframes mymove {
+            50% {box-shadow: 3px 3px 4px #1e5262;}
+            }
+
+            @media screen and (max-width: width 768px)
+            {
+                [class*="col-"]
+                {
+                    width:100%;
+                }
+            }
+        </style>
+        <h2 style=color:white;text-align:center;position:relative;top:20%;>Please provide your feedback here it will help us a lot.</h2>
+        <textarea class="feed" rows="15" cols="70" placeholder="Enter your feedback here...." required></textarea>
+        <input class="button" type="submit" value="Submit" onclick= "enter()">
+    </body>
+</html>
